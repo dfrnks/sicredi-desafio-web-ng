@@ -20,16 +20,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'sicredi-desafio-web-ng'`, () => {
+  it(`should have as title 'Sicredi Desafio Web Angular'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('sicredi-desafio-web-ng');
+    expect(app.title).toEqual('Sicredi Desafio Web Angular');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('sicredi-desafio-web-ng app is running!');
+    expect(compiled.querySelector('.nav a').textContent).toContain('Home');
   });
 });
