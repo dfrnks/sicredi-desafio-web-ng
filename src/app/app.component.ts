@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.styl']
 })
 export class AppComponent {
-  title = 'sicredi-desafio-web-ng';
+  title = 'Sicredi Desafio Web Angular';
+
+  logout(): void {
+    window.sessionStorage.removeItem('isLogged');
+    window.location.reload();
+  }
 }

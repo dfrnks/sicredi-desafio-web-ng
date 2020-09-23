@@ -13,7 +13,7 @@ export class LoginComponent implements OnInit {
   hasError = false;
   showPassword = false;
 
-  constructor(private formBuilder: FormBuilder, public router: Router) {
+  constructor(private formBuilder: FormBuilder, private router: Router) {
     this.checkoutForm = this.formBuilder.group({
       username: 'fake',
       password: 'fake123'
