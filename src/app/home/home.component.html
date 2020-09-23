@@ -1,1 +1,9 @@
-<p>home works!</p>
+<div>
+  <div>
+    <div class="dragons" *ngFor="let dragon of dragons">
+      <div class="name">{{ dragon.id }} - {{ dragon.name }}</div>
+      <button (click)="remover(dragon.id)">Remover</button>
+      <button (click)="router.navigate(['/change/' + dragon.id]);">Alterar</button>
+    </div>
+  </div>
+</div>
