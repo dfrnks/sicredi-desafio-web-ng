@@ -2,22 +2,22 @@
   <form [formGroup]="checkoutForm">
     <div class="row">
       <label>
-        Data criação: {{ createdAt | date }}
+        Data criação: {{ createdAt | date: 'dd/MM/yyyy HH:mm:ss' }}
       </label>
     </div>
 
     <div class="row">
-      <label for="nome">
+      <label for="name">
         Nome:
       </label>
-      <input id="nome" type="text" formControlName="name">
+      <input id="name" type="text" formControlName="name">
     </div>
 
     <div class="row">
-      <label for="tipo">
+      <label for="type">
         Tipo:
       </label>
-      <input id="tipo" type="text" formControlName="type">
+      <input id="type" type="text" formControlName="type">
     </div>
 
     <div class="row">
