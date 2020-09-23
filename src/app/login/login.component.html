@@ -1,1 +1,24 @@
-<p>login works!</p>
+<div>
+  <form [formGroup]="checkoutForm">
+    <div>
+      <label for="user">
+        Username:
+      </label>
+      <input id="user" type="text" formControlName="username">
+    </div>
+
+    <div>
+      <label for="password">
+        Password:
+      </label>
+      <input id="password" [type]="showPassword ? 'text' : 'password'" formControlName="password">
+      <button class="btn-show-password" (click)="showPassword=!showPassword">Show</button>
+    </div>
+
+    <div *ngIf="messagemLogin">
+      <h5 [ngClass]="{'text-danger': hasError}">{{ messagemLogin }}</h5>
+    </div>
+
+    <button class="button" type="submit" (click)="onSubmit(checkoutForm.value)">login</button>
+  </form>
+</div>
