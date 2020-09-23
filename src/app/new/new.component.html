@@ -1,1 +1,29 @@
-<p>new works!</p>
+<div>
+  <form [formGroup]="checkoutForm">
+    <div class="row">
+      <label for="nome">
+        Nome:
+      </label>
+      <input id="nome" type="text" formControlName="name">
+    </div>
+
+    <div class="row">
+      <label for="tipo">
+        Tipo:
+      </label>
+      <input id="tipo" type="text" formControlName="type">
+    </div>
+
+    <div class="row">
+      <label for="historia">
+        História:
+      </label>
+      <input id="historia" type="text" formControlName="history">
+    </div>
+
+    <div class="row">
+      <button (click)="goBack()">Voltar</button>
+      <button class="button" type="submit" (click)="onSubmit(checkoutForm.value)">Cadastrar</button>
+    </div>
+  </form>
+</div>

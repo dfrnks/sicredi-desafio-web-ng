@@ -32,6 +32,7 @@ export class ChangeComponent implements OnInit {
       });
     });
   }
+
   goBack(): void {
     this.router.navigate(['']);
   }
